@@ -60,7 +60,6 @@ const app = new Vue({
         switchDown(){
             this.activeThumb ++;
             if(this.activeThumb > this.slides.length -1){
-                console.log('eccoci');
                 this.activeThumb = 0;
             }
         },
@@ -68,7 +67,7 @@ const app = new Vue({
         
     },
     
-    //se quella grande e quella piccola sono uguali allora > la class Active <
+    //se quella grande e quella piccola sono uguali allora > la class Active<
     // al click raccolgo l'index dell'img cliccata e lo do come valore al value di active Thumb
 
     mounted(){
@@ -79,7 +78,7 @@ const app = new Vue({
                 this.switchDown();  
             }
            
-        }, 1000);
+        }, 2000);
     }
 
 })
