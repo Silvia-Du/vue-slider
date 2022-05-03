@@ -42,8 +42,10 @@ const app = new Vue({
 
     methods : {
 
-        checkClick(){
-            
+        checkClick(index){
+            console.log(index);
+            this.activeThumb = index;
+            console.log(this.activeThumb);
         },
         
     }
