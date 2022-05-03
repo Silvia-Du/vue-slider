@@ -73,16 +73,16 @@ const app = new Vue({
 
         const clock = setInterval(()=> {
 
-            console.log(this.counter --);
             if(this.counter> 0){
-                console.log(this.counter);
+                console.log(this.counter--);
+                this.switchDown();
             }
 
             if(this.counter === 0){
                 clearInterval(clock);
                 console.log('fine');
             }
-        }, 1000);
+        }, 2000);
     }
 
 })
