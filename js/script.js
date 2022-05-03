@@ -37,7 +37,8 @@ const app = new Vue({
             }
         ],
         
-        activeThumb : 0
+        activeThumb : 0,
+        counter : 10,
     },
 
     methods : {
@@ -63,9 +64,25 @@ const app = new Vue({
             }
         }
         
-    }
+    },
     
     //se quella grande e quella piccola sono uguali allora > la class Active <
     // al click raccolgo l'index dell'img cliccata e lo do come valore al value di active Thumb
+
+    mounted(){
+
+        const clock = setInterval(()=> {
+
+            console.log(this.counter --);
+            if(this.counter> 0){
+                console.log(this.counter);
+            }
+
+            if(this.counter === 0){
+                clearInterval(clock);
+                console.log('fine');
+            }
+        }, 1000);
+    }
 
 })
