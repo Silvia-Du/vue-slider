@@ -36,6 +36,19 @@ const app = new Vue({
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
         ],
+        
+        activeThumb : 0
+    },
+
+    methods : {
+
+        checkClick(){
+            
+        },
+        
     }
+    
+    //se quella grande e quella piccola sono uguali allora > la class Active <
+
 
 })
