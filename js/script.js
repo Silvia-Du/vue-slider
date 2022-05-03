@@ -1,9 +1,14 @@
-
+/*
+Partendo dal markup consegnate rendere dinamici tutti i contenuti (foto e testi) e al click su una thumb, visualizzare in grande l’immagine corrispondente
+Bonus:
+1- applicare l’autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
+2- quando il mouse va in hover sullo slider, bloccare l’autoplay e farlo riprendere quando esce
+*/
 const app = new Vue({
     el: '#app',
 
     data: {
-        
+
         slides : [
             {
                 image: 'img/01.jpg',
