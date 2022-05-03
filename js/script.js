@@ -39,6 +39,7 @@ const app = new Vue({
         
         activeThumb : 0,
         counter : 10,
+        hover : false
     },
 
     methods : {
@@ -62,7 +63,8 @@ const app = new Vue({
                 console.log('eccoci');
                 this.activeThumb = 0;
             }
-        }
+        },
+
         
     },
     
@@ -71,18 +73,15 @@ const app = new Vue({
 
     mounted(){
 
-        const clock = setInterval(()=> {
+        setInterval(()=> {
 
-            if(this.counter> 0){
-                console.log(this.counter--);
-                this.switchDown();
+            if(!this.hover){
+                this.switchDown();  
             }
-
-            if(this.counter === 0){
-                clearInterval(clock);
-                console.log('fine');
-            }
-        }, 2000);
+           
+        }, 1000);
     }
 
 })
+
+
