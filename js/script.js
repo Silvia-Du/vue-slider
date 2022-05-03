@@ -47,10 +47,25 @@ const app = new Vue({
             this.activeThumb = index;
             console.log(this.activeThumb);
         },
+
+        switchUp(){
+            this.activeThumb --;
+            if(this.activeThumb < 0){
+                this.activeThumb = this.slides.length -1;
+            }
+        },
+
+        switchDown(){
+            this.activeThumb ++;
+            if(this.activeThumb > this.slides.length -1){
+                console.log('eccoci');
+                this.activeThumb = 0;
+            }
+        }
         
     }
     
     //se quella grande e quella piccola sono uguali allora > la class Active <
-
+    // al click raccolgo l'index dell'img cliccata e lo do come valore al value di active Thumb
 
 })
